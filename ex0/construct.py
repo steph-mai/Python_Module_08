@@ -6,7 +6,7 @@
 #  By: stmaire <stmaire@student.42.fr>           +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/03/09 16:18:00 by stmaire         #+#    #+#               #
-#  Updated: 2026/03/09 17:48:53 by stmaire         ###   ########.fr        #
+#  Updated: 2026/03/10 13:40:47 by stmaire         ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -19,9 +19,10 @@ def get_environment_infos() -> None:
     if os.environ.get("VIRTUAL_ENV") is None:
         print("\nMATRIX STATUS: You're still plugged in\n")
 
-        py_version = sys.version_info
-        minor = f"{py_version.minor}"
-        print(f"Current Python: {sys.executable}.{minor}")
+        v = sys.version_info
+        v_suffix = f"{v.major}.{v.minor}"
+        base_path = os.path.join(sys.exec_prefix, "bin", f"python{v_suffix}")
+        print(f"Current Python: {base_path}")
         print("Virtual Environment: None detected\n")
         print("WARNING: You're in the global environment!")
         print("The machines can see everything you install.\n")
