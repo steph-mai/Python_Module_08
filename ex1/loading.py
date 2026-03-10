@@ -6,7 +6,7 @@
 #  By: stmaire <stmaire@student.42.fr>           +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/03/10 15:30:32 by stmaire         #+#    #+#               #
-#  Updated: 2026/03/10 15:30:37 by stmaire         ###   ########.fr        #
+#  Updated: 2026/03/10 15:53:17 by stmaire         ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -16,6 +16,7 @@ import importlib
 def check_dependencies() -> None:
     dependencies = {
         "pandas": "Data manipulation",
+        "numpy": "Numerical computing",
         "requests": "Network access",
         "matplotlib": "Visualization"
     }
