@@ -6,7 +6,7 @@
 #  By: stmaire <stmaire@student.42.fr>           +#+  +:+       +#+         #
 #                                              +#+#+#+#+#+   +#+            #
 #  Created: 2026/03/09 16:18:00 by stmaire         #+#    #+#               #
-#  Updated: 2026/03/10 13:40:47 by stmaire         ###   ########.fr        #
+#  Updated: 2026/03/10 13:53:57 by stmaire         ###   ########.fr        #
 #                                                                           #
 # ************************************************************************* #
 
@@ -42,7 +42,7 @@ def get_environment_infos() -> None:
         venv_infos: str | None = os.environ.get('VIRTUAL_ENV')
         if venv_infos is not None:
             venv_name = os.path.basename(venv_infos)
-        current_py = f"{sys.executable.replace('3', '')}"
+        current_py = f"{sys.executable}"
 
         print(f"Current Python: {current_py}")
         print(f"Virtual Environment: {venv_name}")
